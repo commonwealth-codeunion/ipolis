@@ -6,13 +6,13 @@
 @import "partners";
 @import "map";
 @import "footer";
-@import "/fonts/Golos/golos.css";
+@import "/fonts/Golos/stylesheet.css";
 
 *{
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    font-family: 'Golos';
+    font-family: 'Golos Text';
     text-decoration: none;
     box-sizing: border-box; 
 }
@@ -22,8 +22,9 @@ button, .btn{
     cursor: pointer;
 }
 
-.container{
-    padding: 68px 125px;
+.container {
+    max-width: 1360px;
+    margin: 0 auto;
 }
  
 .input-phone{

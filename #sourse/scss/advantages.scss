@@ -1,0 +1,44 @@
+.advantages {
+
+    height: 70vh;
+
+    // .advantages__img
+
+    &__img {
+        margin: auto 0;
+        max-width: 462px;
+        max-height: 345px;
+    }
+}
+
+.row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.grid {
+
+    display: grid;
+    grid-gap: 5em;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+
+    // .grid_description
+
+    &_description {
+        font-size: 18px;
+    }
+
+    // .grid__items
+
+    &__items {
+    }
+
+    // .grid__title
+
+    &__title {
+        font-size: 29px;
+        font-weight: bold;
+        margin-bottom: 20px;
+    }
+}
