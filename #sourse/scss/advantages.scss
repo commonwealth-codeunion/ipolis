@@ -32,6 +32,7 @@
     // .grid__items
 
     &__items {
+        max-width: 100%;
     }
 
     // .grid__title
@@ -40,5 +41,33 @@
         font-size: 29px;
         font-weight: bold;
         margin-bottom: 20px;
+    }
+}
+
+@media screen and (max-width: 1190px) {
+    .advantages {
+
+        // .advantages__img
+    
+        &__img {
+            margin: auto 0;
+            max-width: 242px;
+        }
+    }
+
+    .grid {
+        // .grid_description
+    
+        &_description {
+            font-size: 14px;
+        }
+    
+        // .grid__title
+    
+        &__title {
+            font-size: 25px;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
     }
 }

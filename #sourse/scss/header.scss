@@ -1,7 +1,6 @@
 .navbar {
 
 	height: 100px;
-	padding: 30px 120px;
 	display: grid;
 	grid-template-columns: 1fr 3fr 1fr;
 	
@@ -11,6 +10,7 @@
 			margin: 0 auto;
 			display: inline-block;
 			color: #fff;
+			height: 50px;
 			background-color: #FF4F5A;
 			padding: 18px 50px;
 		}

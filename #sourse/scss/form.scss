@@ -8,7 +8,6 @@
     .container{
         display: flex;
         flex-direction: column;
-        justify-content: space-between;
         padding: 68px 0 40px 125px!important;
         margin: 0;
     }
@@ -19,7 +18,7 @@
 
     &__img{
         height: 100%;
-        min-width: 650px; 
+        max-width: 650px;
         background-image: url(../img/form-car.png);
         background-repeat: no-repeat;
         background-size: cover;
@@ -35,26 +34,12 @@
     &__more{
         grid-row: 4/5;
     }
-} 
+}
 
-@media screen and (max-width: 1000px){
-    .form{
-        display: block;
-        height: 700px;
-
-        &__container{
-            padding: 68px 60px!important;
-        }
-
-        &__input{
-            align-self: flex-start;
-            transform: translateX(100px);
-            margin-bottom: 50px;
-        }
-
-        &__img{
+@media screen and (max-width: 876px) {
+    .form {
+        &__img {
             display: none;
         }
-
     }
 }

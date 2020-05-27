@@ -22,7 +22,7 @@
 		// .description__title
 
 		&__title {
-			font-size: 72px;
+			font-size: 4rem;
 			margin-bottom: 70px;
 		}
 
@@ -49,4 +49,18 @@
 		&__img {
 			margin: auto;
 		}
+}
+
+@media screen and (max-width: 1362px) {
+	.content {
+
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+	
+			// .header-content__img
+	
+			&__img {
+				display: none;
+			}
+	}
 }
