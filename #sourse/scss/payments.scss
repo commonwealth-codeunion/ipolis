@@ -1,9 +1,10 @@
 $font_text: 18px;
-$font_title: 40px;
-$font_category: 64px;
+$font_title: 25px;
+$font_category: 40px;
 
 .pay{
     font-size: $font_text;
+    padding-top: 150px;
 
     br{
         margin-bottom: 20px;
@@ -16,13 +17,12 @@ $font_category: 64px;
 
         &::after{
             width: 100px;
-            height: 10px;
-            bottom: -30px;
+            bottom: -15px;
         }
     }
 
     &__questions{
-        padding: 85px 0;
+        padding: 40px 0;
     }
 
     &__question{

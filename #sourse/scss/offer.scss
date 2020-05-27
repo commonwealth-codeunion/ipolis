@@ -34,7 +34,8 @@
 			padding: 30px 40px 30px 60px;
 			width: 300px;
 			display: grid;
-			grid-template-columns: 1fr 1fr;
+            grid-template-columns: 1fr 1fr;
+            cursor: pointer;
 		}
 
 		// .description__link
