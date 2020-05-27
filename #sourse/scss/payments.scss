@@ -9,14 +9,15 @@ $font_category: 64px;
         margin-bottom: 20px;
     }
 
-    &__title{
-        font-size: $font_categoryimportant;
-        margin-bottom: 30px!important;
+    .title{
+        font-size: $font_category;
+        margin-bottom: 30px;
+        transition: .3s;
 
         &::after{
-            width: 100px!important;
-            height: 10px!important;
-            bottom: -30px!important;
+            width: 100px;
+            height: 10px;
+            bottom: -30px;
         }
     }
 
@@ -27,6 +28,7 @@ $font_category: 64px;
     &__question{
         color: #FF4F5A;
         font-size: $font_title;
+        transition: .3s;
     }
     
     &__img{
@@ -73,3 +75,55 @@ $font_category: 64px;
     margin-bottom: .5rem;
     }
 }
+
+@media screen and (max-width: 1150px){
+    .pay{
+        .title{
+            font-size: 50px;
+            transition: .3s;
+
+            &::after{
+                height: 5px;
+            }
+        }
+        .container{
+            padding: 60px;
+        }
+        &__question{
+            font-size: 27px;
+            transition: .3s;
+        }
+    } 
+}
+
+@media screen and (max-width: 850px){
+    .pay{
+        .title{
+            font-size: 35px;
+
+            &::after{
+                bottom: -15px;
+                width: 50px;
+            }
+        }
+
+        &__questions{
+            padding: 40px 0;
+        }
+    } 
+}
+
+@media screen and (max-width: 500px){
+    .pay{
+        .title{
+            font-size: 30px;
+        }
+        .container{
+            padding: 30px;
+        }
+        &__img{
+            height: 70px;
+        }
+    }
+}
+
