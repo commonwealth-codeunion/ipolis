@@ -3,28 +3,37 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>IPOLIS | Автостраховака просто</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <title>IPOLIS | Автостраховака</title>
 </head>
-<body>
-Header!Advanteges!About!Faq!<div class="form">
-    <h1 class="form__title">Быстрая покупка автостраховки!</h1>
-    <div class="form__input">
-        <span class="form__input-text">Расчитать</span>
-        <div class="form__input">
-            <div class="form__code-select">
-                <div class="form__flag"></div>
+<body>  
+Header!!!Advanteges!About!Faq!<section class="form">
+    <div class="form__container container">
+        <h1 class="form__title">Быстрая покупка автостраховки!</h1>
+        <div class="form__input input-phone">
+            <span class="input-phone__text">Расчитать</span>
+            <div class="input-phone__block">
+                <div class="input-phone__flag-box" id="open-countries">
+                    <div class="input-phone__flag flag flag_kz"></div>
+                </div>
+                <div class="input-phone__countries"></div>
+                <span class="input-phone__country-code">+7</span>
+                <input id=phone type="tel" class="input-phone__input" placeholder="xxx-xxx-xxxx" disabled autocomplete="off">
+                <button class="input-phone__submit btn" id="submit">
+                    <img src="./img/arrow_right-white.svg" alt="">
+                </button>
             </div>
-            <span class="form__phone-code">+7</span>
-            <input type="tel" class="form__phone-input">
         </div>
-        <div class="form__input__submit">
-            <img src="./img/arrow.svg" alt="">
+        <div class="form__more">
+            <span class="more__text">Подробнее</span>
+            <a class="more__btn btn" href="/info.html">
+                <img src="./img/arrow_left.svg" alt="" class="more__icon">
+            </a>
         </div>
     </div>
-    <div class="form__more">
-        <span class="form__more__text"></span>
-        <button class="form__more__btn"></button>
-    </div>
-    <div class="form-img"></div>
-</div>Partners!Map!Footer!</body>  
-</html> 
+    <div class="form__img"></div>
+</secton>Partners!Map!Footer!
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+    <script src="./js/main.js"></script>     
+</body>           
+</html>         
