@@ -8,6 +8,8 @@
 @import "footer";
 @import "/fonts/Golos/stylesheet.css";
 
+@import "payments";
+ 
 *{
     padding: 0;
     margin: 0;
@@ -25,6 +27,22 @@ button, .btn{
 .container {
     max-width: 1360px;
     margin: 0 auto;
+}
+
+.title{
+    font-size: 46px;
+    margin-bottom: 30px;
+    position: relative;
+    
+    &::after{
+        content: "";
+        height: 5px;
+        width: 50px;
+        background: black;
+        position: absolute;
+        left: 0;
+        bottom: -16px;
+    }
 }
  
 .input-phone{
