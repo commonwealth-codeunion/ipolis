@@ -6,7 +6,8 @@
 @import "partners";
 @import "map";
 @import "footer";
-
+@import "payments";
+ 
 *{
     padding: 0;
     margin: 0;
@@ -20,6 +21,22 @@ button, .btn{
 
 .container{
     padding: 68px 125px;
+}
+
+.title{
+    font-size: 46px;
+    margin-bottom: 30px;
+    position: relative;
+    
+    &::after{
+        content: "";
+        height: 5px;
+        width: 50px;
+        background: black;
+        position: absolute;
+        left: 0;
+        bottom: -16px;
+    }
 }
  
 .input-phone{

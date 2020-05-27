@@ -13,20 +13,7 @@
     }
 
     &__title{
-        font-size: 46px;
-        position: relative;
-        margin-bottom: 30px;
         grid-row: 1/2;
-
-        &::after{
-            content: "";
-            height: 5px;
-            width: 50px;
-            background: black;
-            position: absolute;
-            left: 0;
-            bottom: -16px;
-        }
     }
 
     &__img{
