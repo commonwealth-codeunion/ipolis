@@ -7,19 +7,20 @@
     <title>IPOLIS | Автостраховака</title>
 </head>
 <body>  
-<header class="header" id="home">
+<header>
+    <nav class="navbar">
+        <img class="logo" src="/img/Logo.png" alt="">
+        <div class="menu">
+            <a class="menu__items" href="#home">Главная</a>
+            <a class="menu__items" href="#about">О нас</a>
+            <a class="menu__items" href="#faq">Faq</a>
+            <a class="menu__items" href="#partners">Партнеры</a>
+            <a class="menu__items" href="#contacts">Контакты</a>
+        </div>
+        <a class="navbar__btn" href="#buy">Купить</a>
+    </nav>
+</header><section class="offer" id="home">
     <div class="container">
-        <nav class="navbar">
-            <img class="logo" src="/img/Logo.png" alt="">
-            <div class="menu">
-                <a class="menu__items" href="#home">Главная</a>
-                <a class="menu__items" href="#about">О нас</a>
-                <a class="menu__items" href="#faq">Faq</a>
-                <a class="menu__items" href="#partners">Партнеры</a>
-                <a class="menu__items" href="#contacts">Контакты</a>
-            </div>
-            <a class="navbar__btn" href="#buy">Купить</a>
-        </nav>
         <div class="content">
             <div class="description">
                 <h1 class="description__title">Купить<br>автостраховку</h1>
@@ -31,7 +32,7 @@
             <img class="content__img" src="/img/main_car.png" alt="">
         </div>
     </div>
-</header>
+</section>
 <section class="advantages">
     <div class="container">
         <div class="row">
@@ -75,14 +76,16 @@
         </div>
         <div class="form__more">
             <span class="more__text">Подробнее</span>
-            <a class="more__btn btn" href="/info.html">
+            <a class="more__btn btn" href="/payments.html">
                 <img src="./img/arrow_left.svg" alt="" class="more__icon">
             </a>
         </div>
     </div>
     <div class="form__img"></div>
-</secton>Partners!Map!Footer!
+</section>Partners!Map!<footer class="footer">
+    
+</footer>
     <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
     <script src="./js/main.js"></script>     
 </body>           
-</html>         
+</html>            

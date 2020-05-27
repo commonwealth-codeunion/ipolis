@@ -1,4 +1,5 @@
 @import "header";
+@import "offer";
 @import "advantages";
 @import "about";
 @import "faq";
@@ -12,7 +13,7 @@
  
 *{
     padding: 0;
-    margin: 0;
+    margin: 0; 
     box-sizing: border-box;
     font-family: 'Golos Text';
     text-decoration: none;
