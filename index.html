@@ -9,6 +9,7 @@
 </head>
 
 <body>
+<<<<<<< HEAD
 <header>
     <nav class="navbar">
         <img class="logo" src="/img/Logo.png" alt="">
@@ -24,6 +25,24 @@
             <span class="menu__burger"></span>
         </div>
     </nav>
+=======
+<header>
+    <nav class="navbar">
+        <a href="/"><img class="logo" src="/img/Logo.png" alt=""></a>
+        <div class="menu">
+            <a class="menu__items" href="/#home">Главная</a>
+            <!-- <a class="menu__items" href="#about">О нас</a> -->
+            <!-- <a class="menu__items" href="#faq">Faq</a> -->
+            <!-- <a class="menu__items" href="#partners">Партнеры</a> -->
+            <a class="menu__items" href="#contacts">Контакты</a>
+        </div>
+        <a class="navbar__btn" href="/#buy">Купить</a>
+
+        <div class="menu__btn" id="burger">
+            <span class="menu__burger"></span>
+        </div>
+    </nav>
+>>>>>>> a175f68e016d2f505d603dc758e6ac53a94f2117
 </header><section class="offer" id="home">
     <div class="container">
         <div class="content">
@@ -62,7 +81,7 @@
             </div>
         </div>
     </div>
-</section><section class="about">
+</section><!-- <section class="about">
     <div class="container">
         <div class="about__grid">
             <div class="about__content">
@@ -78,31 +97,33 @@
             <h1 class="about__company">IPOLIS</h1>
         </div>
     </div>
-</section><section class="form" id="buy">
-    <div class="form__container container">
-        <h1 class="form__title title">Быстрая покупка автостраховки!</h1>
-        <div class="form__input input-phone">
-            <span class="input-phone__text">Расчитать</span>
-            <div class="input-phone__block">
-                <div class="input-phone__flag-box" id="open-countries">
-                    <div class="input-phone__flag flag flag_kz"></div>
+</section> --><section class="form" id="buy">
+    <div class="container row">
+        <div class="form__content">
+            <h1 class="form__title title">Быстрая покупка автостраховки!</h1>
+            <div class="form__input input-phone">
+                <span class="input-phone__text">Расчитать</span>
+                <div class="input-phone__block">
+                    <div class="input-phone__flag-box" id="open-countries">
+                        <div class="input-phone__flag flag flag_kz"></div>
+                    </div>
+                    <div class="input-phone__countries"></div>
+                    <span class="input-phone__country-code">+7</span>
+                    <input id=phone type="tel" class="input-phone__input" placeholder="xxx-xxx-xxxx" disabled autocomplete="off">
+                    <button class="input-phone__submit btn" id="submit">
+                        <img src="./img/arrow_right-white.svg" alt="">
+                    </button>
                 </div>
-                <div class="input-phone__countries"></div>
-                <span class="input-phone__country-code">+7</span>
-                <input id=phone type="tel" class="input-phone__input" placeholder="xxx-xxx-xxxx" disabled autocomplete="off">
-                <button class="input-phone__submit btn" id="submit">
-                    <img src="./img/arrow_right-white.svg" alt="">
-                </button>
+            </div>
+            <div class="form__more">
+                <span class="more__text">Подробнее</span>
+                <a class="more__btn btn" href="/payments.html">
+                    <img src="./img/arrow_left.svg" alt="" class="more__icon">
+                </a>
             </div>
         </div>
-        <div class="form__more">
-            <span class="more__text">Подробнее</span>
-            <a class="more__btn btn" href="/payments.html">
-                <img src="./img/arrow_left.svg" alt="" class="more__icon">
-            </a>
-        </div>
+        <div class="form__img"></div>
     </div>
-    <div class="form__img"></div>
 </section><footer class="footer" id="contacts">
     <div class="container">
         <div class="footer-grid">

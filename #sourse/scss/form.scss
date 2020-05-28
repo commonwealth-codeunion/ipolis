@@ -1,19 +1,12 @@
 .form{
-    display: grid;
     position: relative;
-    grid-template-columns: 2fr 1fr;
-    height: 500px;
     width: 100%;
 
-    &__container{
+    &__content{
         display: flex;
         flex-direction: column;
-        justify-content: space-between;
-        padding: 68px 0 40px 125px!important;
-        margin: 0;
-    }
-
-    &__title{
+        justify-content: space-around;
+        padding: 15px 0;
     }
 
     &__img{
@@ -27,9 +20,11 @@
     &__input{
         align-self: flex-end;
         transform: translateX(100px);
+        padding-top: 50px;
     }
 
     &__more{
+        padding-top: 50px;
     }
 }
 
