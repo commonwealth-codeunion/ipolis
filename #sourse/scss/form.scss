@@ -1,17 +1,23 @@
 .form{
     position: relative;
     width: 100%;
+    padding: 100px 0 0 0;
+    
+    &__row{
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+    }
 
     &__content{
+        padding: 0 0 35px 100px;
         display: flex;
         flex-direction: column;
-        justify-content: space-around;
-        padding: 15px 0;
+        justify-content: space-between;
     }
 
     &__img{
         height: 100%;
-        max-width: 650px;
+        min-height: 500px;
         background-image: url(../img/form-car.png);
         background-repeat: no-repeat;
         background-size: cover;
@@ -41,5 +47,20 @@
         &__container {
             padding: 0 20px 20px!important;
         }
+    }
+}
+
+@media screen and (max-width: 486px){
+    .form{
+        padding-top: 80px;
+    }
+
+    .form__content{
+        margin: 0 auto;
+        padding: 0 30px 30px;
+    }
+
+    .form__row{
+        display: block;
     }
 }
