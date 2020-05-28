@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
     <link rel="stylesheet" href="./css/style.css">
     <title>IPOLIS | Автостраховака</title>
 </head>
@@ -11,30 +11,27 @@
     <nav class="navbar">
         <img class="logo" src="/img/Logo.png" alt="">
         <div class="menu">
-            <a class="menu__items" href="#home">Главная</a>
+            <a class="menu__items" href="/#home">Главная</a>
             <a class="menu__items" href="#about">О нас</a>
             <a class="menu__items" href="#faq">Faq</a>
             <a class="menu__items" href="#partners">Партнеры</a>
             <a class="menu__items" href="#contacts">Контакты</a>
         </div>
         <a class="navbar__btn" href="#buy">Купить</a>
-        <input id="burger" type="checkbox" />
 
-        <label for="burger">
-            <span></span>
-            <span></span>
-            <span></span>
-        </label>
+        <div class="menu__btn" id="burger">
+            <span class="menu__burger"></span>
+        </div>
     </nav>
 </header><section class="offer" id="home">
     <div class="container">
         <div class="content">
             <div class="description">
                 <h1 class="description__title">Купить<br>автостраховку</h1>
-                <div class="description__btn">
-                    <a class="description__link" href="#buy">Перейти</a>
+                <a class="description__btn" href="#buy">
+                    <span class="description__link">Перейти</span>
                     <img class="description__img" src="/img/Arrow.svg" alt="">
-                </div>
+                </a>
             </div>
             <img class="content__img" src="/img/main_car.png" alt="">
         </div>
@@ -64,9 +61,9 @@
             </div>
         </div>
     </div>
-</section>About!Faq!<section class="form" id="buy">
+</section><section class="form" id="buy">
     <div class="form__container container">
-        <h1 class="form__title">Быстрая покупка автостраховки!</h1>
+        <h1 class="form__title title">Быстрая покупка автостраховки!</h1>
         <div class="form__input input-phone">
             <span class="input-phone__text">Расчитать</span>
             <div class="input-phone__block">
@@ -89,7 +86,7 @@
         </div>
     </div>
     <div class="form__img"></div>
-</section>Partners!Map!<footer class="footer" id="contacts">
+</section><footer class="footer" id="contacts">
     <div class="container">
         <div class="footer-grid">
             <div class="footer-grid__items">
