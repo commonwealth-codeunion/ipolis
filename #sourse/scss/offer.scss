@@ -21,8 +21,13 @@
 
 		&__title {
 			font-size: 4rem;
+        }
+        
+        &__subtitle{
+            font-size: 2rem;
+            font-weight: bold;
 			margin-bottom: 70px;
-		}
+        }
 
 		// .description__btn
 
@@ -33,7 +38,15 @@
 			display: grid;
             grid-template-columns: 1fr 1fr;
             cursor: pointer;
-		}
+
+            &:hover{
+                .description__img{
+                    transform: translateX(1 0px);
+                    transition: .3s;
+                }
+            }
+        }
+        
 
 		// .description__link
 
@@ -47,6 +60,7 @@
 
 		&__img {
 			margin: auto;
+            transition: .3s;
 		}
 }
 
