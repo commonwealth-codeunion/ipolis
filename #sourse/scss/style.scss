@@ -33,6 +33,7 @@ button, .btn{
     max-width: 1360px;
     margin: 0 auto;
     height: 100%;
+    padding: 0 20px;
 }
 
 .title{
@@ -52,6 +53,9 @@ button, .btn{
 }
  
 .input-phone{
+    display:grid;
+    align-content: center;
+
     font-size: 18px;
 
     &__text{
@@ -198,5 +202,51 @@ button, .btn{
 
     &_blr{
         background-position: -790px 0;
+    }
+}
+
+@media screen and(max-width: 722px) {
+    .input-phone{
+        font-size: 16px;
+
+        &__block{
+            min-width: 250px;
+            max-height: 70px;
+            display: grid;
+            align-content: center;
+            padding: 30px 50px;
+            grid-template-columns: 1fr 1fr;
+        }
+
+        &__submit{
+            width: 70px;
+            height: 70px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+    
+            img{
+                width: 30px;
+            }
+        }
+    }
+}
+
+@media screen and(max-width: 486px){
+    .input-phone {
+        &__block {
+            min-width: 330px;
+            max-height: 50px;
+            padding: 29px 50px;
+        }
+
+        &__submit{
+            width: 60px;
+            height: 60px;
+        }
+    }
+
+    .title {
+        font-size: 30px;
     }
 }

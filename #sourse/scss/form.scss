@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 .form{
     display: grid;
     position: relative;
@@ -43,4 +44,55 @@
             display: none;
         }
     }
+=======
+.form{
+    display: grid;
+    position: relative;
+    grid-template-columns: 2fr 1fr;
+    height: 500px;
+    width: 100%;
+
+    &__container{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding: 68px 0 40px 125px!important;
+        margin: 0;
+    }
+
+    &__title{
+    }
+
+    &__img{
+        height: 100%;
+        max-width: 650px;
+        background-image: url(../img/form-car.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    &__input{
+        align-self: flex-end;
+        transform: translateX(100px);
+    }
+
+    &__more{
+    }
+}
+
+@media screen and (max-width: 876px) {
+    .form {
+        &__img {
+            display: none;
+        }
+
+        &__input {
+            transform: none;
+        }
+
+        &__container {
+            padding: 0 20px 20px!important;
+        }
+    }
+>>>>>>> 87a010a2c8bb8a99664922be9b5e7a52a6992d68
 }

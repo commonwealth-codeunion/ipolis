@@ -1,6 +1,6 @@
 .advantages {
 
-    height: 70vh;
+    margin: 50px 0;
 
     // .advantages__img
 
@@ -19,9 +19,8 @@
 .grid {
 
     display: grid;
-    grid-gap: 5em;
+    grid-gap: 3em;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
 
     // .grid_description
 
@@ -44,8 +43,10 @@
     }
 }
 
-@media screen and (max-width: 1190px) {
+@media screen and (max-width: 996px) {
     .advantages {
+        display: grid;
+        justify-content: center;
 
         // .advantages__img
     
@@ -55,7 +56,15 @@
         }
     }
 
+    .row {
+        grid-template-columns: 1fr;
+    }
+
     .grid {
+
+        margin-top: 50px;
+        grid-template-columns: 1fr 1fr;
+
         // .grid_description
     
         &_description {
