@@ -1,0 +1,45 @@
+.about {
+
+    // .about__grid
+
+    &__grid {
+        display: grid;
+        margin-top: 70px;
+        grid-gap: 3em;
+        align-items: center;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    // .about__content
+
+    &__content {
+        font-size: 1.5vw;
+        line-height: 40px;
+    }
+
+    // .about__company
+
+    &__company {
+        color: #fff;
+        font-size: 14vw;
+        transform: translate(125px);
+        text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+    }
+}
+
+@media screen and (max-width: 996px) {
+    .about {
+        &__grid {
+            justify-items: center;
+            grid-template-columns: 1fr;
+        }
+
+        &__content {
+            font-size: 14px;
+        }
+
+        &__company {
+            transform: none;
+        }
+    }
+}
