@@ -41,6 +41,7 @@ $font_category: 40px;
     summary::-moz-list-bullet{list-style-type:none;}
     summary::marker{display:none;} 
     summary {
+    outline: none;
     display:inline-block;
     padding: .3em 1.5em 0 0;
     cursor: pointer;
