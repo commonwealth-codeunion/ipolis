@@ -53,14 +53,14 @@
 @media screen and (max-width: 486px){
     .form{
         padding-top: 80px;
-    }
 
-    .form__content{
-        margin: 0 auto;
-        padding: 0 30px 30px;
-    }
+        &__content {
+            margin: 0 auto;
+            padding: 20px;
+        }
 
-    .form__row{
-        display: block;
+        &__row {
+            display: block;
+        }
     }
 }
