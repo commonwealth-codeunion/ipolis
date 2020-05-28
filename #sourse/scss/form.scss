@@ -5,7 +5,7 @@
     height: 500px;
     width: 100%;
 
-    .container{
+    &__container{
         display: flex;
         flex-direction: column;
         justify-content: space-between;
@@ -14,7 +14,6 @@
     }
 
     &__title{
-        grid-row: 1/2;
     }
 
     &__img{
@@ -23,8 +22,6 @@
         background-image: url(../img/form-car.png);
         background-repeat: no-repeat;
         background-size: cover;
-        grid-row: 1/2;
-        grid-column: 2/3;
     }
 
     &__input{
@@ -33,7 +30,6 @@
     }
 
     &__more{
-        grid-row: 4/5;
     }
 }
 
@@ -41,6 +37,14 @@
     .form {
         &__img {
             display: none;
+        }
+
+        &__input {
+            transform: none;
+        }
+
+        &__container {
+            padding: 0 20px 20px!important;
         }
     }
 }
