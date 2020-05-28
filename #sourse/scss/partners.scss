@@ -1,0 +1,21 @@
+.partners {
+
+    // .partners__slider
+
+    &__slider {
+        display: grid;
+        align-items: center;
+        justify-content: center;
+    }
+
+    // .partners__slide
+
+    &__slide {
+    }
+
+    // .partners__slide-items
+
+    &__slide-items {
+        height: 60px;
+    }
+}
