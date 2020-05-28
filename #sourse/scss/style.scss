@@ -218,6 +218,9 @@ section{
 }
 
 @media screen and(max-width: 722px) {
+    section{
+        padding: 100px 50px;
+    }
     .input-phone{
         font-size: 16px;
 
@@ -245,11 +248,24 @@ section{
 }
 
 @media screen and(max-width: 486px){
+    section{
+        padding: 80px 20px;
+
+        &.offer{
+            padding:     0;
+        }
+    }
     .input-phone {
+        font-size: 15px;
+
         &__block {
-            min-width: 330px;
+            min-width: 290px;
             max-height: 50px;
             padding: 29px 50px;
+        }
+
+        &__input{
+            font-size: 15px;
         }
 
         &__submit{

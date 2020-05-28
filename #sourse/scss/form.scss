@@ -49,3 +49,18 @@
         }
     }
 }
+
+@media screen and (max-width: 486px){
+    .form{
+        padding-top: 80px;
+    }
+
+    .form__content{
+        margin: 0 auto;
+        padding: 0 30px 30px;
+    }
+
+    .form__row{
+        display: block;
+    }
+}
