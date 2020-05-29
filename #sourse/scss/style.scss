@@ -65,9 +65,7 @@ section{
 }
  
 .input-phone{
-    display:grid;
-    align-content: center;
-
+    align-self: flex-end;
     font-size: 18px;
 
     &__text{
@@ -228,8 +226,9 @@ section{
         &__block{
             min-width: 250px;
             max-height: 70px;
-            display: grid;
-            align-content: center;
+            max-width: 80vw;
+            display: flex;
+            align-items: center;
             padding: 30px 50px;
             grid-template-columns: 1fr 1fr;
         }
@@ -260,7 +259,6 @@ section{
         font-size: 15px;
 
         &__block {
-            min-width: 290px;
             max-height: 50px;
             padding: 29px 50px;
         }
