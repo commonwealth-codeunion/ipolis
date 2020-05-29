@@ -1,10 +1,15 @@
 .advantages {
-    // .advantages__img
+    // .advantages__title
 
-    &__img {
-        margin: auto 0;
-        max-width: 462px;
-        max-height: 345px;
+    &__title {
+        font-size: 96px;
+        font-weight: bold;
+        text-transform: uppercase;
+        color: white;  /* Fallback: assume this color ON TOP of image */
+        background: url('/img/text_clip.png') no-repeat;
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
     }
 }
 
@@ -47,9 +52,9 @@
 
         // .advantages__img
     
-        &__img {
-            margin: auto 0;
-            max-width: 242px;
+        &__title {
+            margin: auto;
+            font-size: 50px;
         }
     }
 
