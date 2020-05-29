@@ -3,7 +3,7 @@ let btn = $('#burger');
 let menu = $('.menu');
 
 btn.click(() => {
-    if(open){
+    if (open) {
         btn.removeClass('open');
         menu.removeClass('open');
         open = false;

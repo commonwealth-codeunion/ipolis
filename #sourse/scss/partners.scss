@@ -3,19 +3,48 @@
     // .partners__slider
 
     &__slider {
-        display: grid;
-        align-items: center;
-        justify-content: center;
-    }
-
-    // .partners__slide
-
-    &__slide {
+        height: auto;
+        margin: 0 auto;
+        padding-top: 80px;
+        position: relative;
     }
 
     // .partners__slide-items
 
-    &__slide-items {
-        height: 60px;
+    &__items {
+        cursor: pointer;
+        position: relative;
+        height: 50px;
+        margin: 0 auto;
+    }
+}
+
+.slick {
+    &-arrow {
+        position: absolute;
+        font-size: 0px;
+        cursor: pointer;
+        background-color: transparent;
+        color: #000;
+        height: 26px;
+        width: 14px;
+        border: none;
+    }
+
+    &-prev {
+        left: 0;
+        transform: rotate(180deg);
+    }
+
+    &-next {
+        right: 0;
+    }
+}
+
+@media screen and (max-width: 960px) {
+    .partners {
+        &__items {
+            height: 40px;
+        }
     }
 }

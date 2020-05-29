@@ -1,6 +1,5 @@
 $(document).ready(() => {
-// @prepros-append phone-mask.js
-// @prepros-append script.js
-// @prepros-append burger.js
-// @prepros-append slider.js
+    // @prepros-append phone-mask.js
+    // @prepros-append script.js
+    // @prepros-append burger.js
 });
