@@ -118,6 +118,7 @@ section{
         left: -1px;
         top: 70px;
         padding: 13px 8px;
+        z-index: 998;
 
         &.open{
             display: block;
