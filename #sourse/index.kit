@@ -5,6 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/style.css?v=0.8">
+    <link rel="stylesheet" type="text/css"
+        href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css" />
     <title>IPOLIS | Автостраховка</title>
 </head>
 
@@ -22,15 +24,32 @@
     <script type="text/javascript"
         src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
     <script src="./js/main.js"></script>
-    <!-- <script>
+    <script>
         $('.partners__slider').slick({
             infinite: true,
             slidesToShow: 3,
+            autoplaySpeed: 1000,
             autoplay: true,
+            speed: 300,
             slidesToScroll: 3,
-            dots: true,
+            responsive: [
+                {
+                    breakpoint: 720,
+                    settings: {
+                        slidesToShow: 2,
+                        slidesToScroll: 2,
+                    }
+                },
+                {
+                    breakpoint: 548,
+                    settings: {
+                        slidesToShow: 1,
+                        slidesToScroll: 1,
+                    }
+                }
+            ]
         });
-    </script> -->
+    </script>
 </body>
 
 </html>

@@ -5,6 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/style.css?v=0.8">
+    <link rel="stylesheet" type="text/css"
+        href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css" />
     <title>IPOLIS | Автостраховка</title>
 </head>
 
@@ -78,28 +80,28 @@
             <h1 class="about__company">IPOLIS</h1>
         </div>
     </div>
-</section><!-- <section class="partners">
+</section><section class="partners">
     <div class="container">
         <div class="title">Партнеры</div>
         <div class="partners__slider">
-            <div><img class="partners__items" src="/img/partners/eurasia.png" alt=""></div>
-            <div><img class="partners__items" src="/img/partners/jysan garant.png" alt=""></div>
-            <div><img class="partners__items" src="/img/partners/halyk.png" alt=""></div>
-            <div><img class="partners__items" src="/img/partners/nomad.png" alt=""></div>
-            <div><img class="partners__items" src="/img/partners/enck.png" alt=""></div>
-            <div><img class="partners__items" src="/img/partners/kommesk.png" alt=""></div>
-            <div><img class="partners__items" src="/img/partners/acko.png" alt=""></div>
-            <div><img class="partners__items" src="/img/partners/amanat.png" alt=""></div>
-            <div><img class="partners__items" src="/img/partners/london almaty.png" alt=""></div>
-            <div><img class="partners__items" src="/img/partners/victoria.png" alt=""></div>
+            <div class="partners__figure"><img class="partners__items" src="/img/partners/eurasia.png" alt=""></div>
+            <div class="partners__figure"><img class="partners__items" src="/img/partners/jysan garant.png" alt=""></div>
+            <div class="partners__figure"><img class="partners__items" src="/img/partners/halyk.png" alt=""></div>
+            <div class="partners__figure"><img class="partners__items" src="/img/partners/nomad.png" alt=""></div>
+            <div class="partners__figure"><img class="partners__items" src="/img/partners/enck.png" alt=""></div>
+            <div class="partners__figure"><img class="partners__items" src="/img/partners/kommesk.png" alt=""></div>
+            <div class="partners__figure"><img class="partners__items" src="/img/partners/acko.png" alt=""></div>
+            <div class="partners__figure"><img class="partners__items" src="/img/partners/amanat.png" alt=""></div>
+            <div class="partners__figure"><img class="partners__items" src="/img/partners/london almaty.png" alt=""></div>
+            <div class="partners__figure"><img class="partners__items" src="/img/partners/victoria.png" alt=""></div>
         </div>
     </div>
-</section> --><section class="form" id="buy">
+</section><section class="form" id="buy">
     <div class="form__row">
         <div class="form__content">
             <h1 class="form__title title">Быстрая покупка автостраховки!</h1>
             <div class="form__input input-phone">
-                <span class="input-phone__text">Расчитать</span>
+                <span class="input-phone__text error">Получите скидку 50%!</span>
                 <div class="input-phone__block">
                     <div class="input-phone__flag-box" id="open-countries">
                         <div class="input-phone__flag flag flag_kz"></div>
@@ -152,15 +154,32 @@
     <script type="text/javascript"
         src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
     <script src="./js/main.js"></script>
-    <!-- <script>
+    <script>
         $('.partners__slider').slick({
             infinite: true,
             slidesToShow: 3,
+            autoplaySpeed: 1000,
             autoplay: true,
+            speed: 300,
             slidesToScroll: 3,
-            dots: true,
+            responsive: [
+                {
+                    breakpoint: 720,
+                    settings: {
+                        slidesToShow: 2,
+                        slidesToScroll: 2,
+                    }
+                },
+                {
+                    breakpoint: 548,
+                    settings: {
+                        slidesToShow: 1,
+                        slidesToScroll: 1,
+                    }
+                }
+            ]
         });
-    </script> -->
+    </script>
 </body>
 
 </html>
