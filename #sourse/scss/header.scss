@@ -126,9 +126,16 @@
 @media screen and (max-width: 700px){
 	.navbar{
 		position: relative;
+		grid-template-columns: 1fr 1fr 1fr 0.5fr;
 
 		&__btn{
 			padding: 10px 30px;
 		}
+	}
+}
+
+@media screen and (max-width: 450px){
+	.navbar{
+		grid-template-columns: 1fr 0fr 1fr 0.5fr;
 	}
 }

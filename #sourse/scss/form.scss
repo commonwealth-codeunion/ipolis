@@ -36,6 +36,15 @@
 
 @media screen and (max-width: 876px) {
     .form {
+
+        &__row{
+            grid-template-columns: 1fr;
+        }
+
+        &__content{
+            padding-right: 100px;
+        }
+
         &__img {
             display: none;
         }
@@ -44,13 +53,17 @@
             transform: none;
         }
 
+        .input-phone{
+            align-self: auto;
+        }
+
         &__container {
             padding: 0 20px 20px!important;
         }
     }
 }
 
-@media screen and (max-width: 486px){
+@media screen and (max-width: 570px){
     .form{
         padding-top: 80px;
 
