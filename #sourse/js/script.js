@@ -7,12 +7,12 @@ const countries = [
 ];
 var country = countries[2];
 
-$(document).ready(function() {
+$(document).ready(function () {
     $('#phone').removeAttr('disabled').usPhoneFormat({
         format: country[2],
-    });   
- 
-    countries.forEach( (code, index) =>
+    });
+
+    countries.forEach((code, index) =>
         $('.input-phone__countries').append(`
             <div class="input-phone__countries-element" onclick="setCode(${index})">
                 <div class="input-phone__countries-container">
@@ -23,7 +23,7 @@ $(document).ready(function() {
         `));
 
 
-    $('#open-countries').click(() => { 
+    $('#open-countries').click(() => {
         $('.input-phone__countries').toggleClass('open');
     });
 
@@ -33,10 +33,10 @@ $(document).ready(function() {
         // $('.form-phone').removeClass('not-valid');
         let phone = country[1] + " " + $('#phone').val();
         console.log(phone, phone.length);
-        
-        try{
-            if($('#phone').val().trim().length != country[3]) throw Error('Введите номер полностью');
-            if(country[4] && $('#phone').val()[0] != country[4]) throw Error('Введите корректный номер!');
+
+        try {
+            if ($('#phone').val().trim().length != country[3]) throw Error('Введите номер полностью');
+            if (country[4] && $('#phone').val()[0] != country[4]) throw Error('Введите корректный номер!');
 
             $.ajax({
                 type: 'POST',
@@ -44,25 +44,25 @@ $(document).ready(function() {
                 data: { phone },
                 beforeSend: () => {
                     $('.btn').attr('disabled', 'disabled')
-                             .html('Отправляем...');
+                        .html('Отправляем...');
                 }
             }).done(res => {
-                if (res.error = 201) 
+                if (res.error = 201)
                     $('.btn').html('Отправлено');
             })
-            .fail(err => {
-                console.error(err);
-                $('.btn').html('Ошибка');
-            });
-        } 
-        catch (err){
+                .fail(err => {
+                    console.error(err);
+                    $('.btn').html('Ошибка');
+                });
+        }
+        catch (err) {
             console.log(err.message);
-            
+
             $('.error').html(err.message);
             $('.form-phone').addClass('not-valid');
         }
 
-        
+
     });
 
     $('#phone').on('focus click', () => {
@@ -70,11 +70,11 @@ $(document).ready(function() {
     });
 });
 
-function setCode(index){
-    if(countries[index][0] != country[0]) $('#phone').val('');
-    $('.input-phone__flag').removeClass('flag_'+country[0]);
+function setCode(index) {
+    if (countries[index][0] != country[0]) $('#phone').val('');
+    $('.input-phone__flag').removeClass('flag_' + country[0]);
     country = countries[index];
-    $('.input-phone__flag').addClass('flag_'+country[0]);
+    $('.input-phone__flag').addClass('flag_' + country[0]);
     $(".input-phone__country-code").html(country[1]);
     $('.input-phone__countries').toggleClass('open');
 
