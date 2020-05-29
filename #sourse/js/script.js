@@ -43,19 +43,19 @@ $(document).ready(function () {
                 url: 'send.php',
                 data: { phone },
                 beforeSend: () => {
-                    $('.btn').attr('disabled', 'disabled')
-                        .html('Отправляем...');
+                    $('.btn').attr('disabled', 'disabled');
+                    $('.error').html('Отправляем...');
                 }
             }).done(res => {
-                if (res.error = 201)
-                    $('.btn').html('Отправлено');
+                if (res.error = 201) 
+                    $('.error').html('Отправлено!');
             })
-                .fail(err => {
-                    console.error(err);
-                    $('.btn').html('Ошибка');
-                });
-        }
-        catch (err) {
+            .fail(err => {
+                console.error(err);
+                $('.error').html('Произошла ошибка, попробуйте позже');
+            });
+        } 
+        catch (err){
             console.log(err.message);
 
             $('.error').html(err.message);
@@ -67,6 +67,11 @@ $(document).ready(function () {
 
     $('#phone').on('focus click', () => {
         $('.input-phone__countries').removeClass('open');
+    });
+
+    $(document).on('click', (event) => {
+        if(!$(event.target).hasClass('input-phone__countries') && !$(event.target).hasClass('input-phone__flag-box'))
+            $('.input-phone__countries').removeClass('open');
     });
 });
 

@@ -25,6 +25,7 @@
 	width: 150px;
 	height: 28px;
 	margin: auto 0;
+	transform: translateY(3px);
 }
 .menu {
 
@@ -126,8 +127,8 @@
 	.navbar{
 		position: relative;
 
-		&__btn {
-			padding: 14px 20px;
+		&__btn{
+			padding: 10px 30px;
 		}
 	}
 }

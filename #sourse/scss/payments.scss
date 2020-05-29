@@ -78,17 +78,6 @@ $font_category: 40px;
 
 @media screen and (max-width: 1150px){
     .pay{
-        .title{
-            font-size: 50px;
-            transition: .3s;
-
-            &::after{
-                height: 5px;
-            }
-        }
-        .container{
-            padding: 60px;
-        }
         &__question{
             font-size: 27px;
             transition: .3s;
@@ -118,8 +107,8 @@ $font_category: 40px;
         .title{
             font-size: 30px;
         }
-        .container{
-            padding: 30px;
+        .pay__container{
+            padding: 0;
         }
         &__img{
             height: 70px;
