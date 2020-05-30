@@ -7,6 +7,13 @@ const countries = [
 ];
 var country = countries[2];
 
+const office = "https://yandex.kz/map-widget/v1/-/CCQwvRxO1C?lang=ru_RU";
+
+window.onload = () => {
+    console.log('Window already loaded!');
+    $("#map_iframe").attr('src', office);
+}; 
+
 $(document).ready(function () {
     $('#phone').removeAttr('disabled').usPhoneFormat({
         format: country[2],
@@ -21,8 +28,6 @@ $(document).ready(function () {
                 </div>
             </div>
         `));
-
-
     $('#open-countries').click(() => {
         $('.input-phone__countries').toggleClass('open');
     });
