@@ -6,10 +6,11 @@
         font-weight: bold;
         text-transform: uppercase;
         color: white;  /* Fallback: assume this color ON TOP of image */
-        background: url('/img/text_clip.png') no-repeat;
+        background: url('/img/text_clip.jpg') no-repeat;
         background-clip: text;
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
+        background-size: 100%;
     }
 }
 
@@ -23,12 +24,6 @@
     display: grid;
     grid-gap: 3em;
     grid-template-columns: 1fr 1fr;
-
-    // .grid_description
-
-    &_description {
-        font-size: 18px;
-    }
 
     // .grid__items
 
@@ -54,7 +49,7 @@
     
         &__title {
             margin: auto;
-            font-size: 50px;
+            font-size: 60px;
         }
     }
 
@@ -66,12 +61,6 @@
 
         margin-top: 50px;
         grid-template-columns: 1fr 1fr;
-
-        // .grid_description
-    
-        &_description {
-            font-size: 14px;
-        }
     
         // .grid__title
     
@@ -80,5 +69,14 @@
             font-weight: bold;
             margin-bottom: 20px;
         }
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .advantages__title{
+        font-size: 40px;
+    }
+    .grid_description{
+        font-size: 14px;
     }
 }

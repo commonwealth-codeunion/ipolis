@@ -7,6 +7,13 @@ const countries = [
 ];
 var country = countries[2];
 
+const office = "https://yandex.kz/map-widget/v1/-/CCQwvRxO1C?lang=ru_RU";
+
+window.onload = () => {
+    console.log('Window already loaded!');
+    $("#map_iframe").attr('src', office);
+};
+
 $(document).ready(function () {
     $('#phone').removeAttr('disabled').usPhoneFormat({
         format: country[2],
@@ -21,16 +28,23 @@ $(document).ready(function () {
                 </div>
             </div>
         `));
-
-
     $('#open-countries').click(() => {
         $('.input-phone__countries').toggleClass('open');
     });
 
+    $('summary').click((e) => {
+        let target = $(e.target).parent('.faq__question');
+        console.log(target[0].hasAttribute('open'));
+        if (target[0].hasAttribute('open'))
+            setTimeout(() => {
+                target.removeAttr('open'); console.log('wow')
+            }, 10);
+        $('.faq__question').removeAttr('open');
+
+    });
+
     $('#submit').click(() => {
         $('.input-phone__countries').removeClass('open');
-        // $('.error').html('');
-        // $('.form-phone').removeClass('not-valid');
         let phone = country[1] + " " + $('#phone').val();
         console.log(phone, phone.length);
 
@@ -47,15 +61,15 @@ $(document).ready(function () {
                     $('.error').html('Отправляем...');
                 }
             }).done(res => {
-                if (res.error = 201) 
+                if (res.error = 201)
                     $('.error').html('Отправлено!');
             })
-            .fail(err => {
-                console.error(err);
-                $('.error').html('Произошла ошибка, попробуйте позже');
-            });
-        } 
-        catch (err){
+                .fail(err => {
+                    console.error(err);
+                    $('.error').html('Произошла ошибка, попробуйте позже');
+                });
+        }
+        catch (err) {
             console.log(err.message);
 
             $('.error').html(err.message);
@@ -70,7 +84,7 @@ $(document).ready(function () {
     });
 
     $(document).on('click', (event) => {
-        if(!$(event.target).hasClass('input-phone__countries') && !$(event.target).hasClass('input-phone__flag-box'))
+        if (!$(event.target).hasClass('input-phone__countries') && !$(event.target).hasClass('input-phone__flag-box'))
             $('.input-phone__countries').removeClass('open');
     });
 });
@@ -82,10 +96,5 @@ function setCode(index) {
     $('.input-phone__flag').addClass('flag_' + country[0]);
     $(".input-phone__country-code").html(country[1]);
     $('.input-phone__countries').toggleClass('open');
-
-    // $('#phone').unbind();
-    // $('#phone').attr('placeholder', country[2]).usPhoneFormat({
-    //     format: country[2]
-    // })
 }
 

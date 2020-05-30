@@ -1,15 +1,27 @@
-let open = false;
+let opened = false;
 let btn = $('#burger');
 let menu = $('.menu');
+let items = $('.menu__items');
+
+
+function open(){
+    btn.addClass('open');
+    menu.addClass('open');
+    opened = true;
+}
+
+function close(){
+    btn.removeClass('open');
+    menu.removeClass('open');
+    opened = false;
+}
 
 btn.click(() => {
-    if (open) {
-        btn.removeClass('open');
-        menu.removeClass('open');
-        open = false;
-    } else {
-        btn.addClass('open');
-        menu.addClass('open');
-        open = true;
-    }
+    if (opened) close(); 
+    else open();
 });
+
+items.click(() => {
+    close();
+});
+
