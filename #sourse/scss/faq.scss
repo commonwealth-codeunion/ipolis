@@ -26,21 +26,36 @@
         }
     }
 
+    &__list{
+        padding-left: 50px;
+        margin: 20px 0;
+
+        li{
+            margin-bottom: 20px;
+        }
+
+        &.list-number{
+            list-style: decimal;
+        }
+    }
+
     &__text{
         font-weight: normal;
         font-size: 28px;
         width: 31%;
+        align-self: flex-end;
     }
 
     &__requirements{
         display: flex;
         flex-direction: column;
-        align-items: end;
+        align-items: flex-start;
+        justify-content: flex-end;
     }
 
     &__documents{
         display: flex;
-        justify-content: end;
+        justify-content: flex-end;
         width: 100%;
         grid-template-columns: 1fr 1fr 1fr;
         margin: 100px 0;
@@ -86,6 +101,8 @@
     .faq{
         &__text{
             width: 60%;
+            align-self: center;
+            text-align: center;
         }
         &__documents{
             flex-direction: column;
@@ -129,5 +146,8 @@
 @media screen and (max-width: 700px){
     .faq__text{
         font-size: 23px;
+    }
+    .faq__list{
+        padding-left: 25px;
     }
 }

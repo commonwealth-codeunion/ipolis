@@ -27,10 +27,18 @@ $(document).ready(function () {
         $('.input-phone__countries').toggleClass('open');
     });
 
+    $('summary').click((e) => {
+        let target = $(e.target).parent('.faq__question');
+        console.log(target[0].hasAttribute('open'));
+                if(target[0].hasAttribute('open'))
+                    setTimeout( () =>{
+                    target.removeAttr('open'); console.log('wow')}, 10);
+        $('.faq__question').removeAttr('open');
+        
+    });
+
     $('#submit').click(() => {
         $('.input-phone__countries').removeClass('open');
-        // $('.error').html('');
-        // $('.form-phone').removeClass('not-valid');
         let phone = country[1] + " " + $('#phone').val();
         console.log(phone, phone.length);
 
@@ -82,10 +90,5 @@ function setCode(index) {
     $('.input-phone__flag').addClass('flag_' + country[0]);
     $(".input-phone__country-code").html(country[1]);
     $('.input-phone__countries').toggleClass('open');
-
-    // $('#phone').unbind();
-    // $('#phone').attr('placeholder', country[2]).usPhoneFormat({
-    //     format: country[2]
-    // })
 }
 

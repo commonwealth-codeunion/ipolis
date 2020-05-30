@@ -30,6 +30,10 @@ button, .btn{
     cursor: pointer;
 }
 
+
+br{
+    margin-bottom: 20px;
+}
 section{
     padding: 100px;
 }
@@ -297,21 +301,26 @@ details{
 @media screen and(max-width: 486px){
     section{
         padding: 80px 20px;
-
-        &.offer{
-            padding:     0;
-        }
     }
     .input-phone {
-        font-size: 15px;
+        font-size: 13px;
 
         &__block {
             max-height: 50px;
-            padding: 29px 50px;
+            min-width: 270px;
+            padding: 29px 30px;
+        }
+
+        &__countries{
+            top: 50px;
         }
 
         &__input{
-            font-size: 15px;
+            font-size: 13px;
+        }
+
+        &__flag-box{
+            width: 30px;
         }
 
         &__submit{
