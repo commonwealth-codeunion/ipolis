@@ -1,5 +1,6 @@
 @font-face {
     font-family: 'Golos Text';
+    font-display: swap;
     src: url('GolosText-Medium.eot');
     src: local('Golos Text Medium'), local('GolosText-Medium'),
         url('GolosText-Medium.eot?#iefix') format('embedded-opentype'),
@@ -12,6 +13,7 @@
 
 @font-face {
     font-family: 'Golos Text';
+    font-display: swap;
     src: url('GolosText-Black.eot');
     src: local('Golos Text Black'), local('GolosText-Black'),
         url('GolosText-Black.eot?#iefix') format('embedded-opentype'),
@@ -24,6 +26,7 @@
 
 @font-face {
     font-family: 'Golos Text';
+    font-display: swap;
     src: url('GolosText-DemiBold.eot');
     src: local('Golos Text DemiBold'), local('GolosText-DemiBold'),
         url('GolosText-DemiBold.eot?#iefix') format('embedded-opentype'),
@@ -36,6 +39,7 @@
 
 @font-face {
     font-family: 'Golos Text';
+    font-display: swap;
     src: url('GolosText-Bold.eot');
     src: local('Golos Text Bold'), local('GolosText-Bold'),
         url('GolosText-Bold.eot?#iefix') format('embedded-opentype'),
@@ -48,6 +52,7 @@
 
 @font-face {
     font-family: 'Golos Text';
+    font-display: swap;
     src: url('GolosText-Regular.eot');
     src: local('Golos Text Regular'), local('GolosText-Regular'),
         url('GolosText-Regular.eot?#iefix') format('embedded-opentype'),
