@@ -101,14 +101,10 @@ section{
     border: 1px solid #C4C4C4;
     border-radius: 360px;
     max-width: 380px;
-    display: inline-block;
-
-    &__flag-box,  &__country-code{
-        display: inline-block;
-    }
-
+    display: inline-flex;
+    letter-spacing: 0.2em;
+    
     &__flag-box{
-        height: 100%;
         padding: 0 10px 0 30px;
         cursor: pointer;
 
@@ -131,17 +127,20 @@ section{
         }
     }
 
-    &__flags{
-        display: inline-block;
-    }
-
     &__countries-container{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
         margin-bottom: 10px;
         cursor: pointer;
 
         &:last-child{
             margin-bottom: 0;
         }
+    }
+
+    &__flags{
+        margin-right: 10px;
     }
 
     &__flag{
@@ -164,7 +163,7 @@ section{
     }
     
     &__country-code{
-        margin-right: 0.2em;
+        margin-right: 0.4em;
     }
 
     &__input{

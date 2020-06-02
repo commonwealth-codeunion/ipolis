@@ -1,6 +1,13 @@
 .offer {
     // height: 90vh;
     
+    &__form{
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: start;
+        align-items: center;
+    }
+
     &__submit{
         padding: 40px 30px;
         box-shadow: 0px 20px 50px rgba(255, 79, 90, 0.5);
@@ -13,6 +20,8 @@
 .content {
 	display: grid;
     grid-template-columns: 2fr 1fr;
+    grid-gap: 4em;
+
     height: 100%;
 		// .header-content__img
 
@@ -75,10 +84,13 @@
 }
 
 @media screen and (max-width: 1400px){
+    .offer__form{
+        justify-content: center;
+    }
     .content{
         grid-template-columns: 1fr;
-            justify-content: center;
-            padding-top: 125px;
+        justify-content: center;
+        padding-top: 125px;
 
         &__img{
             height: 500px;
