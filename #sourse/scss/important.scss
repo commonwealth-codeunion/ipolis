@@ -1,0 +1,42 @@
+.important {
+
+    background-color: #F8F8F8;
+
+    // .important__grid
+
+    &__grid {
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        grid-gap: 1em;
+    }
+
+    // .important__content
+
+    &__content {
+       
+    }
+
+    // .important__list
+
+    &__list {
+    }
+
+    // .important__list-items
+
+    &__list-items {
+    }
+
+    // .important__more
+
+    &__more {
+    }
+
+    // .important__lead
+
+    &__lead {
+    }
+}
+.container {
+}
+.title {
+}
