@@ -1,16 +1,24 @@
 .advantages {
+    position: relative;
+
     // .advantages__title
 
     &__title {
-        font-size: 96px;
+        font-size: 64px;
         font-weight: bold;
         text-transform: uppercase;
-        color: white;  /* Fallback: assume this color ON TOP of image */
-        background: url('/img/text_clip.jpg') no-repeat;
-        background-clip: text;
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        background-size: 100%;
+        color: #FF4F5A;
+    }
+
+    &__beatify::after {
+        content: '&';
+        position: absolute;
+        top: 0px;
+        left: 30%;
+        font-size: 350px;
+        font-weight: bold;
+        color: rgba(255, 79, 90, .1);
+        z-index: -1;
     }
 }
 
@@ -40,7 +48,15 @@
     }
 }
 
-@media screen and (max-width: 996px) {
+@media screen and (max-width: 1400px) {
+    .advantages {
+        &__beatify {
+            display: none;
+        }
+    }
+}
+
+@media screen and (max-width: 1200px) {
     .advantages {
         display: grid;
         justify-content: center;
