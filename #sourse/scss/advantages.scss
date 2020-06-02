@@ -4,10 +4,11 @@
     // .advantages__title
 
     &__title {
-        font-size: 64px;
+        font-size: 72px;
         font-weight: bold;
         text-transform: uppercase;
         color: #FF4F5A;
+        letter-spacing: -0.05em;
     }
 
     &__beatify::after {

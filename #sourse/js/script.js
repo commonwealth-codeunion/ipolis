@@ -20,16 +20,14 @@ $(document).ready(function () {
     });
 
     countries.forEach((code, index) =>
-        $('.input-phone__countries').append(`
-            <div class="input-phone__countries-element" onclick="setCode(${index})">
-                <div class="input-phone__countries-container">
-                    <div class="input-phone__flags flag flag_${code[0]}"></div>
-                    <span class="input-phone__code">${code[1]}</span>
-                </div>
+        $('#countries-list').append(`
+            <div class="phone-form__countries-container" onclick="setCode(${index})">
+                <div class="phone-form__flags flag flag_${code[0]}"></div>
+                <span class="phone-form__code">${code[1]}</span>
             </div>
         `));
     $('#open-countries').click(() => {
-        $('.input-phone__countries').toggleClass('open');
+        $('#countries-list').toggleClass('open');
     });
 
     $('summary').click((e) => {
@@ -44,7 +42,7 @@ $(document).ready(function () {
     });
 
     $('#submit').click(() => {
-        $('.input-phone__countries').removeClass('open');
+        $('#phone-form__countries').removeClass('open');
         let phone = country[1] + " " + $('#phone').val();
         console.log(phone, phone.length);
 
@@ -80,21 +78,21 @@ $(document).ready(function () {
     });
 
     $('#phone').on('focus click', () => {
-        $('.input-phone__countries').removeClass('open');
+        $('.phone-form__countries').removeClass('open');
     });
 
     $(document).on('click', (event) => {
-        if (!$(event.target).hasClass('input-phone__countries') && !$(event.target).hasClass('input-phone__flag-box'))
-            $('.input-phone__countries').removeClass('open');
+        if (!$(event.target).hasClass('phone-form__countries') && !$(event.target).hasClass('phone-form__flag'))
+            $('.phone-form__countries').removeClass('open');
     });
 });
 
 function setCode(index) {
     if (countries[index][0] != country[0]) $('#phone').val('');
-    $('.input-phone__flag').removeClass('flag_' + country[0]);
+    $('.phone-form__flag').removeClass('flag_' + country[0]);
     country = countries[index];
-    $('.input-phone__flag').addClass('flag_' + country[0]);
-    $(".input-phone__country-code").html(country[1]);
-    $('.input-phone__countries').toggleClass('open');
+    $('.phone-form__flag').addClass('flag_' + country[0]);
+    $(".phone-form__country-code").html(country[1]);
+    $('.phone-form__countries').toggleClass('open');
 }
 
