@@ -38,34 +38,6 @@
             list-style: decimal;
         }
     }
-
-    &__text{
-        font-weight: normal;
-        font-size: 28px;
-        width: 31%;
-        align-self: flex-end;
-    }
-
-    &__requirements{
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        justify-content: flex-end;
-    }
-
-    &__documents{
-        display: flex;
-        justify-content: flex-end;
-        width: 100%;
-        grid-template-columns: 1fr 1fr 1fr;
-        margin: 100px 0;
-    }
-
-    &__document{
-        max-width: 280px;
-        min-width: 180px;
-        margin: 0 30px;
-    }
 }
 
 .point {
@@ -88,33 +60,7 @@
         border-bottom: 0;
     }
 }
-
-@media screen and (max-width: 1400px){
-    .faq{
-        &__text{
-            width: 45%;
-        }
-    }
-}
-
 @media screen and (max-width: 1000px){
-    .faq{
-        &__text{
-            width: 60%;
-            align-self: center;
-            text-align: center;
-        }
-        &__documents{
-            flex-direction: column;
-            align-items: center;
-        }
-        &__document{
-            margin: 30px 0;
-        }
-        &__document-text{
-            text-align: center;
-        }
-    }
     .point{
         padding: 0;
         margin: 0 auto 30px auto;
@@ -135,10 +81,6 @@
 
         &__text{
             width: 100%;
-        }
-        &__documents{
-            margin-top: 50px;
-            margin-bottom: 0;
         }
     }
 }
