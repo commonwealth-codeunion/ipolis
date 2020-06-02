@@ -4,7 +4,7 @@
 
 .content {
 	display: grid;
-    grid-template-columns:1fr 3fr 1fr;
+    grid-template-columns: 2fr 1fr;
     height: 100%;
 		// .header-content__img
 
@@ -20,14 +20,14 @@
 		// .description__title
 
 		&__title {
-			font-size: 4rem;
+			font-size: 68px;
         }
         
         &__subtitle{
-            font-size: 2rem;
+            font-size: 45px;
             font-weight: bold;
             margin-bottom: 70px;
-            margin-top: 15px;
+            // margin-top: 15px;
         }
 
 		// .description__btn
