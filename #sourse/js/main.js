@@ -5,4 +5,4 @@ $(document).ready(() => {
     // @prepros-append slick.js
 
     document.addEventListener('touchstart', ontouchstart, { passive: true });
-});
+});  

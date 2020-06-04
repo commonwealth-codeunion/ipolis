@@ -160,7 +160,7 @@ section{
             top: 0;
         }
     }
-    
+     
     &__country-code{
         margin-right: 0.4em;
     }
@@ -168,12 +168,64 @@ section{
     &__input{
         border: none;
         outline: none;
+        background: none;
         font-size: 18px;
         line-height: 22px;
         letter-spacing: 0.2em;
         max-width: 180px;
     }
 }
+
+.submit.load{
+    color: #FF4F5A;     
+    position: relative;
+
+    &::after{
+        content: "";
+        position: absolute;
+        border: 2px solid white;
+        border-radius: 360px; 
+        border-right-color: transparent;
+        top: 25%;
+        left: 45%;
+        height: 25px;
+        width: 25px;
+        -webkit-animation: load 1.4s infinite linear;
+        animation: load 1.4s infinite linear;
+    }
+    &:hover{
+        transform: scale(1) ;
+    }
+}
+
+.disabled{
+    cursor: auto;
+    
+    &:hover{
+        transform: scale(1) ;
+    }
+}
+
+@-webkit-keyframes load {
+    0% {
+      -webkit-transform: rotate(0deg);
+      transform: rotate(0deg);
+    }
+    100% {
+      -webkit-transform: rotate(360deg);
+      transform: rotate(360deg);
+    }
+  }
+  @keyframes load {
+    0% {
+      -webkit-transform: rotate(0deg);
+      transform: rotate(0deg);
+    }
+    100% {
+      -webkit-transform: rotate(360deg);
+      transform: rotate(360deg);
+    }
+  }
 
 .flag{
     height: 10px;

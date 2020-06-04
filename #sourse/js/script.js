@@ -15,19 +15,19 @@ window.onload = () => {
 };
 
 $(document).ready(function () {
-    $('#phone').removeAttr('disabled').usPhoneFormat({
+    $('.phone').removeAttr('disabled').usPhoneFormat({
         format: country[2],
     });
 
     countries.forEach((code, index) =>
-        $('#countries-list').append(`
+        $('.countries-list').append(`
             <div class="phone-form__countries-container" onclick="setCode(${index})">
                 <div class="phone-form__flags flag flag_${code[0]}"></div>
                 <span class="phone-form__code">${code[1]}</span>
             </div>
         `));
-    $('#open-countries').click(() => {
-        $('#countries-list').toggleClass('open');
+    $('.open-countries').click(() => {
+        $('.countries-list').toggleClass('open');
     });
 
     $('summary').click((e) => {
@@ -41,37 +41,44 @@ $(document).ready(function () {
 
     });
 
-    $('#submit').click(() => {
-        $('#phone-form__countries').removeClass('open');
-        let phone = country[1] + " " + $('#phone').val();
+    $('.submit').click((event) => {
+        $('.phone-form__countries').removeClass('open');
+        let id = $(event.target).attr('data-form-id');
+        let phone = country[1] + " " + $('.phone')[id].value;
+       
+         console.log(id);
         console.log(phone, phone.length);
 
         try {
-            if ($('#phone').val().trim().length != country[3]) throw Error('Введите номер полностью');
-            if (country[4] && $('#phone').val()[0] != country[4]) throw Error('Введите корректный номер!');
+            $('.phone-form').css('border-color', '#c4c4c4');
+
+            if ($('.phone')[id].value.length != country[3]) throw Error('Введите номер полностью');
+            if (country[4] && $('.phone')[id].value[0] != country[4]) throw Error('Введите корректный номер!');
 
             $.ajax({
-                type: 'POST',
+                type: 'POST',   
                 url: 'send.php',
                 data: { phone },
                 beforeSend: () => {
-                    $('.btn').attr('disabled', 'disabled');
-                    $('.error').html('Отправляем...');
+                    $('#phone'+id).attr('disabled', 'disabled').addClass('load');
+                    $('.important__text').html('Отправляем...');
                 }
             }).done(res => {
-                if (res.error = 201)
-                    $('.error').html('Отправлено!');
+                if (res.error = 201){
+                    $('.important__text').html('Отправлено!');
+                    $('#phone'+id).removeClass('load');
+                }
             })
                 .fail(err => {
                     console.error(err);
-                    $('.error').html('Произошла ошибка, попробуйте позже');
+                    $('.important__text').html('Произошла ошибка');
+                    $('#phone'+id).removeClass('load').addClass('disabled');
                 });
         }
         catch (err) {
             console.log(err.message);
-
-            $('.error').html(err.message);
-            $('.form-phone').addClass('not-valid');
+            $('.important__text').html(err.message);
+            $($('.phone-form')[id]).css('border-color', 'red');
         }
 
 
