@@ -138,8 +138,11 @@
     }
     .description{
         &__title{
-            font-size: 40px;
+            font-size: 30px;
             line-height: 35px;
+        }
+        &__subtitle {
+            font-size: 30px;
         }
         &__link{
             font-size: 20px;
