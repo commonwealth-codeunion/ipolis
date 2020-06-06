@@ -23,4 +23,4 @@
             }); $(this).bind('paste', function (e) { e.preventDefault(); var inputValue = e.originalEvent.clipboardData.getData('Text'); if (!$.isNumeric(inputValue)) { return !1 } else { inputValue = String(inputValue.replace(/(\d{3})(\d{3})(\d{4})/, "($1) $2-$3")); $(this).val(inputValue); $(this).val(''); inputValue = inputValue.substring(0, 14); $(this).val(inputValue) } })
         }
     }
-}(jQuery))
+}(jQuery)) 
