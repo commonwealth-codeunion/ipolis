@@ -93,16 +93,43 @@ section{
 }
 
 .phone-form{
-    padding: 40px 80px 40px 0;
-    align-items: center;
+    padding: 40px 80px 40px 0px;
+    align-items: center; 
     position: relative;
     background: none;
     border: 1px solid #C4C4C4;
     border-radius: 360px;
     max-width: 380px;
     display: inline-flex;
-    letter-spacing: 0.2em;
+    letter-spacing: 0.2em; 
     
+    &:before{
+        content: "Расчитать стоимость";
+        color: #c4c4c4;
+        position: absolute;
+        top: -50px;
+        left: 0px;
+        font-size: 18px;
+        letter-spacing: normal;
+        display: block;
+        font-weight: bold;
+    }
+    &.invalid:before{
+        content: "Введите корректный номер";
+    }
+
+    &.error:before{
+        content: "Прозошла ошибка, попробуйте позже";
+    }
+
+    &.send:before{
+        content: "Номер успешно отправлен!";
+    }
+
+    &.invalid{
+        border-color: red!important;
+    }
+
     &__flag-box{
         padding: 0 10px 0 30px;
         cursor: pointer;
@@ -176,26 +203,33 @@ section{
     }
 }
 
-.submit.load{
-    color: #FF4F5A;     
-    position: relative;
+.submit{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
 
-    &::after{
-        content: "";
-        position: absolute;
-        border: 2px solid white;
-        border-radius: 360px; 
-        border-right-color: transparent;
-        top: 25%;
-        left: 45%;
-        height: 25px;
-        width: 25px;
-        -webkit-animation: load 1.4s infinite linear;
-        animation: load 1.4s infinite linear;
+    &.load{
+    
+        img{
+            display: none;
+        }
+        
+        &::after{
+            content: "";
+            border: 2px solid white;
+            border-radius: 360px; 
+            border-right-color: transparent;
+            height: 25px;
+            width: 25px;
+            display: block;
+            -webkit-animation: load 1.4s infinite linear;
+            animation: load 1.4s infinite linear;
+        }
+        &:hover{
+            transform: scale(1) ;
+        }
     }
-    &:hover{
-        transform: scale(1) ;
-    }
+
 }
 
 .disabled{
@@ -203,6 +237,21 @@ section{
     
     &:hover{
         transform: scale(1) ;
+    }
+}
+
+@media screen and (max-width: 550px){
+    .phone-form{
+        padding: 20px 40px 20px 0;
+    }
+    
+    .offer .submit{
+        height: 65px;
+        width: 65px;
+
+        img{
+            width: 25.5px;
+        }
     }
 }
 

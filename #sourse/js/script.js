@@ -44,16 +44,17 @@ $(document).ready(function () {
     $('.submit').click((event) => {
         $('.phone-form__countries').removeClass('open');
         let id = $(event.target).attr('data-form-id');
-        let phone = country[1] + " " + $('.phone')[id].value;
+        let val = $('.phone')[id].value;
+        let phone = country[1] + " " + val;
        
          console.log(id);
         console.log(phone, phone.length);
 
         try {
-            $('.phone-form').css('border-color', '#c4c4c4');
+            $('.phone-form').removeClass('invalid');
 
-            if ($('.phone')[id].value.length != country[3]) throw Error('Введите номер полностью');
-            if (country[4] && $('.phone')[id].value[0] != country[4]) throw Error('Введите корректный номер!');
+            if (val.length != country[3]) throw Error('Введите номер полностью');
+            if (country[4] && val.length > 0 && val[0] != country[4]) throw Error('Введите корректный номер!');
 
             $.ajax({
                 type: 'POST',   
@@ -62,23 +63,24 @@ $(document).ready(function () {
                 beforeSend: () => {
                     $('#phone'+id).attr('disabled', 'disabled').addClass('load');
                     $('.important__text').html('Отправляем...');
+                },
+                complete: () => {
+                    $('#phone'+id).removeAttr('disabled').removeClass('load');
                 }
             }).done(res => {
                 if (res.error = 201){
-                    $('.important__text').html('Отправлено!');
-                    $('#phone'+id).removeClass('load');
+                    $('.phone-form').addClass('send').html(val);
+                    $('.submit').attr('disabled', 'disabled');
                 }
             })
                 .fail(err => {
                     console.error(err);
-                    $('.important__text').html('Произошла ошибка');
-                    $('#phone'+id).removeClass('load').addClass('disabled');
+                    $('.phone-form')[id].classList.add('error');
                 });
         }
         catch (err) {
             console.log(err.message);
-            $('.important__text').html(err.message);
-            $($('.phone-form')[id]).css('border-color', 'red');
+            $('.phone-form')[id].classList.add('invalid');
         }
 
 
