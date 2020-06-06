@@ -25,8 +25,10 @@
 
 @media screen and (max-width: 512px) {
     .about {
+        padding: 70px 25px;
+
         &__content {
-            font-size: 16px;
+            font-size: 18px;
             line-height: 28px;
         }
     }
