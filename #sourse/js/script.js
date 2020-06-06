@@ -43,7 +43,7 @@ $(document).ready(function () {
 
     $('.submit').click((event) => {
         $('.phone-form__countries').removeClass('open');
-        let id = $(event.target).attr('data-form-id');
+        let id = $(event.currentTarget).attr('data-form-id');
         let val = $('.phone')[id].value;
         let phone = country[1] + " " + val;
        
@@ -65,17 +65,19 @@ $(document).ready(function () {
                     $('.important__text').html('Отправляем...');
                 },
                 complete: () => {
-                    $('#phone'+id).removeAttr('disabled').removeClass('load');
+                    $('#phone'+id).removeClass('load');
                 }
             }).done(res => {
                 if (res.error = 201){
-                    $('.phone-form').addClass('send').html(val);
+                    $('.phone-form').addClass('send');
+                    $('.phone').attr({value: val, disabled: 'disabled'});
                     $('.submit').attr('disabled', 'disabled');
                 }
             })
                 .fail(err => {
                     console.error(err);
                     $('.phone-form')[id].classList.add('error');
+                    $('#phone'+id).removeAttr('disabled');
                 });
         }
         catch (err) {
