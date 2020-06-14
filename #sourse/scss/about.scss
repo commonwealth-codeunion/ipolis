@@ -1,5 +1,7 @@
+@import "util/variables.scss";
+
 .about {
-    background-color: #F8F8F8;
+    background-color: $bg-specified_color;
     font-size: 36px;
     line-height: 60px;
     // .about__content
@@ -9,7 +11,7 @@
         font-weight: bold;
 
         span {
-            color: #FF4F5A;
+            color: $primary_color;
         }
     }
 }

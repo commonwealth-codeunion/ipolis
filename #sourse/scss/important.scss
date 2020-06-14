@@ -1,6 +1,6 @@
 .important {
 
-    background-color: #F8F8F8;
+    background-color: $bg-specified_color;
 
     // .important__grid
 
@@ -20,7 +20,7 @@
 
     &__list {
         margin: 20px 0;
-        color: #FF4F5A;
+        color: $primary_color;
         line-height: 30px;
         margin-left: 20px;
     }
@@ -45,7 +45,7 @@
 
     &__calc-btn {
         color: #fff;
-		background-color: #FF4F5A;
+		background-color: $primary_color;
 		text-transform: uppercase;
 		letter-spacing: 0.15em;
         font-size: 13px;
@@ -54,7 +54,7 @@
         height: 55px;
         width: 200px;
         padding: 0 20px;
-        box-shadow: 0px 4px 50px rgba(255, 79, 90, 0.5);
+        box-shadow: 0px 4px 50px $shadow_color;
         transition: .2s;
         
 		&:hover{
@@ -72,7 +72,7 @@
         margin: 50px 0 20px;
 
         &:before{
-            color: #FF4F5A; 
+            color: $primary_color; 
             content: "Быстро. Надежно. Честно";
         }
     }

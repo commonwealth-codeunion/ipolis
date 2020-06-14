@@ -1,0 +1,68 @@
+.float-action-button {
+
+    position: fixed;
+
+    bottom: 0;
+    right: 20px;
+    z-index: 999;
+    
+    // .float-action-button__content
+    
+    &__content {
+        background-color: #fff;
+        position: absolute;
+        z-index: 1;
+        width: 200px;
+        bottom: 41px;
+        right: 100px;
+        border: 2px solid #C4C4C4;
+        border-radius: 30px;
+        padding: 25px 18px;
+        line-height: 0px;
+        font-size: 14px;
+    }
+    
+    // .float-action-button__highlighted
+    
+    &__highlighted {
+        font-size: 20px;
+        color: $primary_color;
+    }
+    
+    // .float-action-button__img
+    
+    &__img {
+        position: absolute;
+        height: 150px;
+        bottom: 0;
+        right: 0;
+    }
+
+}
+
+@media screen and (max-width: 500px) {
+    .float-action-button {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .float-action-button {
+        &__content {
+            font-size: 11px;
+            width: 165px;
+            bottom: 34px;
+            right: 87px;
+            padding: 20px 20px;
+        }
+
+        &__highlighted {
+            font-size: 18px;
+        }
+
+        &__img {
+            position: absolute;
+            height: 130px;
+        }
+    }
+}

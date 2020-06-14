@@ -1,3 +1,5 @@
+@import "util/variables.scss";
+
 .advantages {
     position: relative;
 
@@ -7,7 +9,7 @@
         font-size: 72px;
         font-weight: bold;
         text-transform: uppercase;
-        color: #FF4F5A;
+        color: $primary_color;
         letter-spacing: -0.05em;
     }
 
@@ -18,7 +20,7 @@
         left: 30%;
         font-size: 350px;
         font-weight: bold;
-        color: rgba(255, 79, 90, .1);
+        color: rgba(27, 108, 168, 0.1);
         z-index: -1;
     }
 }

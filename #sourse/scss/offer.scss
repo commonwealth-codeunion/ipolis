@@ -1,24 +1,24 @@
+@import "util/variables.scss";
+
 .offer {
-    // height: 9o8fv                                                                     , vh;
-    
+    margin-top: 50px;
+
     &__form{
         display: flex;
         flex-wrap: nowrap;
         justify-content: start;
         align-items: center;
-
-        
+        padding-top: 70px;
     }
         
     &__submit{
-        box-shadow: 0px 20px 50px rgba(255, 79, 90, 0.5);
+        box-shadow: 0px 20px 50px $shadow_color;
         border-radius: 360px;
-        background-color: #FF4F5A;
+        background-color: $primary_color;
         margin-left: 20px;
         height: 100px;
         width: 100px;
     }
-
 }
 
 .content {
@@ -31,7 +31,8 @@
 
 		&__img {
 			margin: auto 0;
-			max-width: 821px;
+            max-width: 689.9px;
+            max-height: 366.74px;
 		}
 }
 .description {
@@ -41,7 +42,7 @@
 		// .description__title
 
 		&__title {
-			font-size: 68px;
+			font-size: 58px;
         }
         
         &__subtitle{
@@ -88,13 +89,17 @@
 }
 
 @media screen and (max-width: 1400px){
-    .offer__form{
-        justify-content: center;
+
+    .offer {
+        margin: 0;
+
+        &__form{
+            justify-content: center;
+        }
     }
     .content{
         grid-template-columns: 1fr;
         justify-content: center;
-        padding-top: 125px;
 
         &__img{
             height: 500px;
@@ -103,9 +108,10 @@
     }
     .description{
         text-align: center;
-    }
-    .description__btn{
-        margin: 0 auto;
+
+        &__btn{
+            margin: 0 auto;
+        }
     }
 }
 
@@ -120,25 +126,25 @@
             margin: 0 auto;
         }
     }
-    .description__title{
-        text-align: center;
-        font-size: 60px;
-    }
-    .description__btn{
-        margin: 0 auto;
+    .description {
+        &__title{
+            text-align: center;
+            font-size: 60px;
+        }
+        &__btn{
+            margin: 0 auto;
+        }
     }
 }
 
 @media screen and (max-width: 700px){
-    .offer{
-        padding: 0;
-    }
     .content{
-        padding: 60px 0;
-    }
-    .content__img{
-        height: auto;
-        width: 90%;
+        padding: 50px 0;
+
+        &__img{
+            height: 225px;
+            margin: 0 auto;
+        }
     }
     .description{
         &__title{
@@ -157,3 +163,12 @@
     }
 }
 
+@media screen and (max-width: 450px) {
+    .content{
+
+        &__img{
+            height: 180px;
+            margin: 0 auto;
+        }
+    }
+}

@@ -1,6 +1,4 @@
-$font_text: 18px;
-$font_title: 25px;
-$font_category: 40px;
+@import "util/variables.scss";
 
 .pay{
     font-size: $font_text;
@@ -21,7 +19,7 @@ $font_category: 40px;
     }
 
     &__question{
-        color: #FF4F5A;
+        color: $primary_color;
         font-size: $font_title;
         transition: .3s;
     }
@@ -76,4 +74,3 @@ $font_category: 40px;
         }
     }
 }
-

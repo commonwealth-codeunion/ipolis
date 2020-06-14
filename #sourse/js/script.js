@@ -46,8 +46,8 @@ $(document).ready(function () {
         let id = $(event.currentTarget).attr('data-form-id');
         let val = $('.phone')[id].value;
         let phone = country[1] + " " + val;
-       
-         console.log(id);
+
+        console.log(id);
         console.log(phone, phone.length);
 
         try {
@@ -57,27 +57,27 @@ $(document).ready(function () {
             if (country[4] && val.length > 0 && val[0] != country[4]) throw Error('Введите корректный номер!');
 
             $.ajax({
-                type: 'POST',   
+                type: 'POST',
                 url: 'send.php',
                 data: { phone },
                 beforeSend: () => {
-                    $('#phone'+id).attr('disabled', 'disabled').addClass('load');
+                    $('#phone' + id).attr('disabled', 'disabled').addClass('load');
                     $('.important__text').html('Отправляем...');
                 },
                 complete: () => {
-                    $('#phone'+id).removeClass('load');
+                    $('#phone' + id).removeClass('load');
                 }
             }).done(res => {
-                if (res.error = 201){
+                if (res.error = 201) {
                     $('.phone-form').addClass('send');
-                    $('.phone').attr({value: val, disabled: 'disabled'});
+                    $('.phone').attr({ value: val, disabled: 'disabled' });
                     $('.submit').attr('disabled', 'disabled');
                 }
             })
                 .fail(err => {
                     console.error(err);
                     $('.phone-form')[id].classList.add('error');
-                    $('#phone'+id).removeAttr('disabled');
+                    $('#phone' + id).removeAttr('disabled');
                 });
         }
         catch (err) {
@@ -106,4 +106,3 @@ function setCode(index) {
     $(".phone-form__country-code").html(country[1]);
     $('.phone-form__countries').toggleClass('open');
 }
-

@@ -1,5 +1,6 @@
 @import "header";
 @import "offer";
+@import "float-action-button";
 @import "advantages";
 @import "about";
 @import "faq";
@@ -11,6 +12,8 @@
 
 @import "payments";
 @import "slick";
+
+@import "util/variables.scss";
  
 *{
     padding: 0;
@@ -55,7 +58,7 @@ section{
 }
 
 .purple-font{
-    color: #FF4F5A;
+    color: $primary_color;
 }
 
 .title{
