@@ -10,16 +10,21 @@
 
     display: grid;
     padding: 0 20px;
+    justify-items: center;
     grid-template-columns: repeat(4, 1fr);
 
-		&__items {
+        &__img {
+            max-width: 161px;
+            max-height: 54px;
+        }
 
-
-			&_company {
-                display: grid;
-                align-items: end;
-			}
-		}
+        &__items {
+            &_company {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+            }
+        }
 
 		&__title {
             font-size: 24px;
@@ -37,10 +42,15 @@
         }
 }
 
-@media screen and (max-width: 620px) {
+@media screen and (max-width: 1180px) {
     .footer-grid {
         grid-template-columns: repeat(2, 1fr);
+        justify-items: start;
         grid-gap: 1em;
+
+        &__img {
+            max-width: 85px;
+        }
 
         &__title {
             font-size: 18px;
